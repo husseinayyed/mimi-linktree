@@ -18,12 +18,10 @@ body {
     background: linear-gradient(45deg,#00CFFF,#A020F0);
     color: white;
     height: 100vh;
-    
 }
 .rtl {
   direction: rtl;
 }
-/*
-start_color = (135, 206, 235)  # Sky blue
-    end_color = (128, 0, 128) 
-*/
+* {
+  user-select: none;
+}
