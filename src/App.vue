@@ -35,6 +35,14 @@ onMounted(()=>{
 
 <template>
   <main>
+  <div class="icon">
+    <div class="container">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
     <h1 class="quicksand-bold title">MimiStore</h1>
     <div v-for="text in desContext">
       <p class="amiri-regular describe rtl">{{ text }}</p>
@@ -47,7 +55,7 @@ onMounted(()=>{
 main {
   width: 100%;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%,-50%);
   display: flex;
@@ -58,5 +66,41 @@ main {
 .describe {
   font-size: 1.28em;
   display: inline;
+}
+.icon {
+  overflow: hidden;
+  display: none;
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+}
+.icon .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+}
+.icon .container::after {
+  content: "S";
+  position: absolute;
+  top: -14%;
+  left: 26%;
+  font-size: 6rem;
+  color: #00CFFF;
+}
+.icon .container div {
+  width: 8px;
+  height: 80px;
+  background-color: purple;
+  border-radius: 4px;
+}
+.icon .container div:nth-child(2) {
+  transform: skewX(25deg);
+  margin-right: 20px;
+}
+.icon .container div:nth-child(3) {
+  transform: skewX(-25deg);
 }
 </style>
